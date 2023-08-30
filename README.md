@@ -1,2 +1,3 @@
 # shiny-test-apps
-A playground repo for testing different Shiny functionality
+
+A playground repo for testing out different aspects of Shiny functionality.
