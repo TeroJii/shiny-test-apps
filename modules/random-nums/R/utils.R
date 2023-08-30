@@ -1,8 +1,10 @@
 # ui functions
 randomUI <- function(id) {
   tagList(
-    textOutput(NS(id, "val")),
-    actionButton(NS(id, "go"), "Go!")
+    fluidRow(
+      column(width = 2, textOutput(NS(id, "val"))),
+      column(width = 10, actionButton(NS(id, "go"), "Go!"))
+    )
   )
 }
 
