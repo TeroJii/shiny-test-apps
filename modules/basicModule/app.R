@@ -55,10 +55,16 @@ histogramServer <- function(id) {
 # Run the application
 histogramApp <- function() {
   ui <- fluidPage(
-    histogramUI("hist1")
+    column(width = 6,
+      histogramUI("hist1")
+    ),
+    column(width = 6,
+      histogramUI("hist2")
+    )
   )
   server <- function(input, output, session) {
     histogramServer("hist1")
+    histogramServer("hist2")
   }
   shinyApp(ui, server)
 }
